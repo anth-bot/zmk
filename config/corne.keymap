@@ -15,21 +15,30 @@
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <11 10>;
+            layers = <0>;
         };
 
         apostrophe {
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <23 22>;
+            layers = <0>;
         };
 
         nav {
             bindings = <&tog 1>;
             key-positions = <37 40>;
+            layers = <0>;
         };
 
         bluetooth {
             bindings = <&mo 5>;
             key-positions = <36 41>;
+        };
+
+        windows {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <37 36>;
+            layers = <1>;
         };
     };
 
@@ -76,9 +85,9 @@
 
         number_layer {
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &none     &none   &kp N7  &kp N8  &kp N9  &none  &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &none     &none   &kp N4  &kp N5  &kp N6  &none  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &none     &none   &kp N1  &kp N2  &kp N3  &none  &trans
                          &trans   &trans   &trans    &kp N0  &trans  &trans
             >;
 
@@ -97,7 +106,7 @@
 &trans  &kp EXCL   &kp AT            &kp HASH        &kp DLLR              &kp PRCNT         &kp CARET  &kp AMPS               &kp ASTRK        &kp LPAR  &kp RPAR  &trans
 &trans  &kp GRAVE  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp MINUS         &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT  &kp BSLH  &trans
 &trans  &kp TILDE  &kp INSERT        &kp PG_UP       &kp HOME              &kp UNDERSCORE    &kp PLUS   &kp END                &kp PG_DN        &kp DEL   &kp PIPE  &trans
-                                     &trans          &kp LEFT_GUI          &trans            &trans     &trans                 &trans
+                                     &trans          &trans                &trans            &trans     &trans                 &trans
             >;
 
             label = "sym";
