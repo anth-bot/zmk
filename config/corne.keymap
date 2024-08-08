@@ -40,6 +40,16 @@
             key-positions = <37 36>;
             layers = <1>;
         };
+
+        caps {
+            bindings = <&kp CAPS>;
+            key-positions = <12 13>;
+        };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 1>;
+        };
     };
 
     keymap {
@@ -57,7 +67,7 @@
 &kp ESCAPE  &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp DELETE
 &kp TAB     &kp A  &kp S  &kp D  &kp F         &kp G        &kp H          &kp J  &kp K      &kp L    &kp SEMI  &kp RET
 &kp LCTRL   &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                          &mo 3  &kp LEFT_ALT  &kp SPACE    &kp BACKSPACE  &mo 1  &mo 4
+                          &mo 4  &kp LEFT_ALT  &kp SPACE    &kp BACKSPACE  &mo 1  &mo 3
             >;
         };
 
@@ -83,17 +93,6 @@
             label = "ijkl";
         };
 
-        number_layer {
-            bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &none     &none   &kp N7  &kp N8  &kp N9  &none  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &none     &none   &kp N4  &kp N5  &kp N6  &none  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &none     &none   &kp N1  &kp N2  &kp N3  &none  &trans
-                         &trans   &trans   &trans    &kp N0  &trans  &trans
-            >;
-
-            label = "num";
-        };
-
         symbol_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
@@ -110,6 +109,17 @@
             >;
 
             label = "sym";
+        };
+
+        number_layer {
+            bindings = <
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &none     &none   &kp N7  &kp N8  &kp N9  &none  &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &none     &none   &kp N4  &kp N5  &kp N6  &none  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &none     &none   &kp N1  &kp N2  &kp N3  &none  &trans
+                         &trans   &trans   &trans    &kp N0  &trans  &trans
+            >;
+
+            label = "num";
         };
 
         bluetooth {
