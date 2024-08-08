@@ -12,13 +12,13 @@
     combos {
         compatible = "zmk,combos";
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
+        backslash {
+            bindings = <&kp BACKSLASH>;
             key-positions = <11 10>;
         };
 
-        return {
-            bindings = <&kp RET>;
+        apostrophe {
+            bindings = <&kp SINGLE_QUOTE>;
             key-positions = <23 22>;
         };
 
@@ -28,7 +28,7 @@
         };
 
         bluetooth {
-            bindings = <&mo 4>;
+            bindings = <&mo 5>;
             key-positions = <36 41>;
         };
     };
@@ -45,10 +45,10 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E  &kp R         &kp T          &kp Y          &kp U          &kp I      &kp O    &kp P     &kp BACKSLASH
-&mo 2       &kp A  &kp S  &kp D  &kp F         &kp G          &kp H          &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL   &kp Z  &kp X  &kp C  &kp V         &kp B          &kp N          &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                          &mo 3  &kp LEFT_ALT  &lt 3 SPACE    &kp BACKSPACE  &kp RIGHT_ALT  &kp TAB
+&kp ESCAPE  &kp Q  &kp W  &kp E  &kp R         &kp T               &kp Y          &kp U  &kp I      &kp O    &kp P     &kp DELETE
+&mo 3       &kp A  &kp S  &kp D  &kp F         &kp G               &kp H          &kp J  &kp K      &kp L    &kp SEMI  &kp RET
+&kp LCTRL   &kp Z  &kp X  &kp C  &kp V         &kp B               &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                          &mo 4  &kp LEFT_ALT  &mt DELETE SPACE    &kp BACKSPACE  &mo 1  &kp TAB
             >;
         };
 
@@ -57,18 +57,29 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP    &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans    &trans
+                        &trans  &trans  &trans    &trans  &mo 2     &trans
             >;
 
             label = "nav";
         };
 
+        ijkl {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp I   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp J   &kp K   &kp L   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "ijkl";
+        };
+
         number_layer {
             bindings = <
-&trans   &kp N1  &kp N2   &kp N3     &kp N4    &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &trans
-&trans   &trans  &kp INS  &kp PG_UP  &kp HOME  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-&kp F12  &kp F1  &kp F2   &kp F3     &kp F4    &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-                          &trans     &trans    &trans    &trans  &trans  &trans
+&trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &trans
+&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
+&kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
             label = "num";
@@ -85,14 +96,14 @@
             bindings = <
 &trans  &kp EXCL   &kp AT            &kp HASH        &kp DLLR              &kp PRCNT         &kp CARET     &kp AMPS               &kp ASTRK        &kp LPAR  &kp RPAR  &trans
 &trans  &kp GRAVE  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp KP_MINUS      &kp KP_EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT  &kp BSLH  &trans
-&trans  &kp TILDE  &trans            &trans          &trans                &kp UNDERSCORE    &kp PLUS      &trans                 &trans           &trans    &kp PIPE  &trans
+&trans  &kp TILDE  &kp INSERT        &kp PG_UP       &kp HOME              &kp UNDERSCORE    &kp PLUS      &kp END                &kp PG_DN        &kp DEL   &kp PIPE  &trans
                                      &trans          &trans                &trans            &trans        &kp RIGHT_WIN          &trans
             >;
 
             label = "sym";
         };
 
-        layer_3 {
+        bluetooth {
             display-name = "num";
             bindings = <
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
@@ -100,6 +111,8 @@
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans          &trans  &trans  &trans
             >;
+
+            label = "bt";
         };
     };
 };
