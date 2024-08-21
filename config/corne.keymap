@@ -52,8 +52,8 @@
             layers = <0 1 2>;
         };
 
-        toggle_s {
-            bindings = <&kt S>;
+        toggle_d {
+            bindings = <&kt D>;
             key-positions = <38 15>;
             layers = <2>;
         };
