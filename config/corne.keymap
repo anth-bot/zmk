@@ -65,6 +65,8 @@
             label = "SEMIPOSTROPHE";
             #binding-cells = <0>;
             bindings = <&kp SINGLE_QUOTE>, <&kp SEMICOLON>;
+
+            tapping-term-ms = <300>;
         };
     };
 
