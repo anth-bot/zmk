@@ -26,7 +26,7 @@
         };
 
         nav {
-            bindings = <&tog 2>;
+            bindings = <&tog 1>;
             key-positions = <37 40>;
         };
 
