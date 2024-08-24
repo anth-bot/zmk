@@ -16,29 +16,29 @@
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <11 10>;
-            layers = <0 1 2>;
+            layers = <0 2 2>;
         };
 
         apostrophe {
             bindings = <&kp SEMICOLON>;
             key-positions = <23 22>;
-            layers = <0 1 2>;
+            layers = <0 2 2>;
         };
 
         nav {
-            bindings = <&tog 1>;
+            bindings = <&tog 2>;
             key-positions = <37 40>;
         };
 
         bluetooth {
-            bindings = <&mo 6>;
+            bindings = <&mo 8>;
             key-positions = <36 41>;
         };
 
         windows {
             bindings = <&kp LEFT_GUI>;
             key-positions = <37 36>;
-            layers = <1>;
+            layers = <2>;
         };
 
         caps {
@@ -49,13 +49,18 @@
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <0 1>;
-            layers = <0 1 2>;
+            layers = <0 2 2>;
         };
 
         toggle_d {
             bindings = <&kt D>;
             key-positions = <38 15>;
             layers = <2>;
+        };
+
+        Game {
+            bindings = <&tog 6>;
+            key-positions = <36 37 38>;
         };
     };
 
@@ -85,7 +90,7 @@
 &kp ESCAPE  &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P           &kp DELETE
 &kp TAB     &kp A  &kp S  &kp D  &kp F         &kp G        &kp H          &kp J  &kp K      &kp L    &Semipostrophe  &kp RET
 &kp LCTRL   &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH        &kp RSHFT
-                          &mo 5  &kp LEFT_ALT  &kp SPACE    &kp BACKSPACE  &mo 1  &mo 4
+                          &mo 5  &kp LEFT_ALT  &kp SPACE    &kp BACKSPACE  &mo 2  &mo 4
             >;
         };
 
@@ -149,6 +154,29 @@
             >;
 
             label = "num";
+        };
+
+        Gaming {
+            display-name = "Base";
+            bindings = <
+&kp ESCAPE     &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P           &kp DELETE
+&mt LSHFT TAB  &kp A  &kp S  &kp D  &kp F         &kp G        &kp H          &kp J  &kp K      &kp L    &Semipostrophe  &kp RET
+&kp LCTRL      &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH        &kp RSHFT
+                             &mo 8  &kp LEFT_ALT  &kp SPACE    &kp BACKSPACE  &mo 2  &mo 4
+            >;
+
+            label = "Game";
+        };
+
+        Gaming_Numbers {
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "GNUM";
         };
 
         bluetooth {
