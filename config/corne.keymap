@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 
 / {
     combos {
@@ -44,6 +43,7 @@
         caps {
             bindings = <&kp CAPS>;
             key-positions = <12 13>;
+            layers = <0>;
         };
 
         grave {
@@ -53,7 +53,7 @@
         };
 
         toggle_d {
-            bindings = <&kt D>;
+            bindings = <&sk D>;
             key-positions = <38 15>;
             layers = <2>;
         };
@@ -61,17 +61,6 @@
         Game {
             bindings = <&tog 6>;
             key-positions = <36 37 38>;
-        };
-    };
-
-    behaviors {
-        Semipostrophe: Semipostrophe {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SEMIPOSTROPHE";
-            #binding-cells = <0>;
-            bindings = <&kp SINGLE_QUOTE>, <&kp SEMICOLON>;
-
-            tapping-term-ms = <300>;
         };
     };
 
@@ -87,9 +76,9 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P           &kp DELETE
-&kp TAB     &kp A  &kp S  &kp D  &kp F         &kp G        &kp H          &kp J  &kp K      &kp L    &Semipostrophe  &kp RET
-&kp LCTRL   &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH        &kp RSHFT
+&kp ESCAPE  &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp DELETE
+&kp TAB     &kp A  &kp S  &kp D  &kp F         &kp G        &kp H          &kp J  &kp K      &kp L    &kp SQT   &kp RET
+&kp LCTRL   &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                           &mo 5  &kp LEFT_ALT  &kp SPACE    &kp BACKSPACE  &mo 1  &mo 4
             >;
         };
@@ -159,9 +148,9 @@
         Gaming {
             display-name = "Base";
             bindings = <
-&kp ESCAPE     &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P           &kp DELETE
-&mt LSHFT TAB  &kp A  &kp S  &kp D  &kp F         &kp G        &kp H          &kp J  &kp K      &kp L    &Semipostrophe  &kp RET
-&kp LCTRL      &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH        &kp RSHFT
+&kp ESCAPE     &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp DELETE
+&mt LSHFT TAB  &kp A  &kp S  &kp D  &kp F         &kp G        &kp H          &kp J  &kp K      &kp L    &none     &kp RET
+&kp LCTRL      &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                              &mo 7  &kp LEFT_ALT  &kp SPACE    &kp BACKSPACE  &mo 1  &mo 4
             >;
 
