@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 
 / {
     combos {
@@ -54,7 +53,7 @@
         };
 
         toggle_d {
-            bindings = <&kt D>;
+            bindings = <&hold D>;
             key-positions = <38 15>;
             layers = <2>;
         };
@@ -62,6 +61,17 @@
         Game {
             bindings = <&tog 6>;
             key-positions = <36 37 38>;
+        };
+    };
+
+    behaviors {
+        hold: hold {
+            compatible = "zmk,behavior-sticky-key";
+            label = "HOLD";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <60000>;
+            quick-release;
         };
     };
 
