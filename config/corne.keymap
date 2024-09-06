@@ -102,7 +102,7 @@
                         &trans  &trans  &trans    &trans  &mo 2     &mo 3
             >;
 
-            label = "nav";
+            label = "Navigation";
         };
 
         ijkl {
@@ -113,10 +113,11 @@
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
-            label = "ijkl";
+            label = "IJKL";
         };
 
         Modify {
+            display-name = "Modify";
             bindings = <
 &kp EQUAL  &kp N1  &kp N2      &kp N3    &kp N4         &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &kp MINUS
 &trans     &trans  &kp INS     &kp HOME  &kp PAGE_UP    &trans    &trans  &trans  &trans  &trans  &kp LBKT  &kp RBKT
@@ -124,7 +125,7 @@
                                &trans    &trans         &trans    &trans  &trans  &trans
             >;
 
-            label = "Mod";
+            label = "Modify";
         };
 
         symbol_layer {
@@ -134,7 +135,7 @@
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Raise";
+            display-name = "Symbol";
             bindings = <
 &trans  &kp EXCL   &kp AT            &kp HASH        &kp DLLR              &kp PRCNT         &kp CARET  &kp AMPS               &kp ASTRK        &kp LPAR  &kp RPAR  &trans
 &trans  &kp GRAVE  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp MINUS         &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT  &kp BSLH  &trans
@@ -142,10 +143,11 @@
                                      &trans          &trans                &trans            &trans     &trans                 &trans
             >;
 
-            label = "sym";
+            label = "Symbol";
         };
 
         number_layer {
+            display-name = "Number";
             bindings = <
 &trans  &kp F1  &kp F2   &kp F3   &kp F4   &none     &none   &kp N7  &kp N8  &kp N9  &kp MINUS  &trans
 &trans  &kp F5  &kp F6   &kp F7   &kp F8   &none     &none   &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans
@@ -153,11 +155,11 @@
                          &trans   &trans   &trans    &trans  &kp N0  &trans
             >;
 
-            label = "num";
+            label = "Number";
         };
 
         Gaming {
-            display-name = "Base";
+            display-name = "Gaming";
             bindings = <
 &kp ESCAPE     &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp DELETE
 &mt LSHFT TAB  &kp A  &kp S  &kp D  &kp F         &kp G        &kp H          &kp J  &kp K      &kp L    &none     &kp RET
@@ -169,6 +171,7 @@
         };
 
         Gaming_Numbers {
+            display-name = "Gaming Numbers";
             bindings = <
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -176,11 +179,11 @@
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
-            label = "GNUM";
+            label = "Gaming Numbers";
         };
 
         bluetooth {
-            display-name = "num";
+            display-name = "Bluetooth";
             bindings = <
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &studio_unlock
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
@@ -188,7 +191,7 @@
                                         &trans        &trans        &trans          &trans  &trans  &trans
             >;
 
-            label = "bt";
+            label = "Bluetooth";
         };
     };
 };
