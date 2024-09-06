@@ -104,7 +104,7 @@
         navigation_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP    &trans     &trans   &trans
-&trans  &socd A &socd S &socd D &socd F &socd G   &trans  &socd2 LEFT  &kp DOWN  &socd2 RIGHT  &trans   &trans
+&trans  &trans  &socd S &socd D &socd F &trans    &trans  &socd2 LEFT  &kp DOWN  &socd2 RIGHT  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &kp SQT  &trans
                         &trans  &trans  &trans    &trans  &mo 2     &mo 3
             >;
