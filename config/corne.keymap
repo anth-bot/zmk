@@ -74,6 +74,12 @@
             release-after-ms = <60000>;
             quick-release;
         };
+
+        socd2: socd2 {
+            compatible = "zmk,behavior-socd";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+        };
     };
 
     keymap {
