@@ -74,12 +74,6 @@
             release-after-ms = <60000>;
             quick-release;
         };
-
-        socd2: socd2 {
-            compatible = "zmk,behavior-socd";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-        };
     };
 
     keymap {
@@ -94,7 +88,7 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp DELETE
+&grsec      &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp DELETE
 &kp TAB     &kp A  &kp S  &kp D  &kp F         &kp G        &kp H          &kp J  &kp K      &kp L    &kp SQT   &kp RET
 &kp LCTRL   &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                           &mo 5  &kp LEFT_ALT  &kp SPACE    &kp BACKSPACE  &mo 1  &mo 4
@@ -104,7 +98,7 @@
         navigation_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP    &trans     &trans   &trans
-&trans  &trans  &socd S &socd D &socd F &trans    &trans  &socd2 LEFT  &kp DOWN  &socd2 RIGHT  &trans   &trans
+&trans  &trans  &socd S &socd D &socd F &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &kp SQT  &trans
                         &trans  &trans  &trans    &trans  &mo 2     &mo 3
             >;
