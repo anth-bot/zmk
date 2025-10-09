@@ -80,10 +80,10 @@
 
         navigation {
             bindings = <
-&trans  &trans  &trans   &trans   &trans   &trans    &trans  &trans    &kp UP    &trans     &trans  &trans
-&trans  &trans  &socd S  &socd D  &socd F  &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans   &trans   &trans   &trans    &trans  &trans    &trans    &trans     &trans  &trans
-                         &trans   &trans   &trans    &trans  &trans    &mo 0
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans    &mo 0
             >;
 
             label = "Navigation";
